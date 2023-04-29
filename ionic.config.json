@@ -1,0 +1,7 @@
+{
+  "name": "yol",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
