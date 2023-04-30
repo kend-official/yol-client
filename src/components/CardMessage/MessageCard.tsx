@@ -5,11 +5,21 @@ import {
   IonCardSubtitle,
 } from "@ionic/react";
 
-export default function MessageCard() {
+type Props = {
+  UserMessage: boolean;
+  Sender?: string;
+};
+
+export default function MessageCard({ UserMessage, Sender }: Props) {
   return (
-    <IonCard>
+    <IonCard
+      style={{
+        background: UserMessage ? "#c7ecee" : "",
+        color: UserMessage ? "#1e272e" : "",
+      }}
+    >
       <IonCardHeader>
-        <IonCardSubtitle>Venshar</IonCardSubtitle>
+        <IonCardSubtitle>{Sender ? Sender : "you"}</IonCardSubtitle>
       </IonCardHeader>
 
       <IonCardContent>
